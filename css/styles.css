@@ -1,0 +1,92 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #FF69B4, #1E90FF); /* Pink to Blue Gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Container for the content */
+.container {
+    text-align: center;
+}
+
+/* Content */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #FF69B4; /* Pink text on white button */
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: slideUp 2s forwards;
+}
+
+.btn:hover {
+    background-color: #FF69B4; /* Pink background */
+    color: white; /* White text on hover */
+    transition: background-color 0.3s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation delays for smoother effects */
+.animate-fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.5s;
+}
+
+.delay-2 {
+    animation-delay: 1s;
+}

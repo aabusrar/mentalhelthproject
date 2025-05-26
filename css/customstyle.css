@@ -1,0 +1,99 @@
+.custom_message_success {
+    opacity: 0; /* تبدأ بالشفافية */
+    transform: translateY(-20px); /* تبدأ من موضع أعلى */
+    animation: slideIn 0.5s forwards; /* تطبيق الأنيميشن */
+    color: green; /* Dark green text */
+    padding: 1rem; /* استخدام وحدات مرنة */
+    margin: 0.5rem 0; /* استخدام وحدات مرنة */
+    border-radius: 5px;
+    text-align: center; 
+    width: 100%; /* عرض 100% ليتناسب مع الحاوية */
+    box-sizing: border-box; /* لحساب الحدود والحشوات ضمن العرض الإجمالي */
+}
+
+/* Styles for error messages */
+.custom_message_fail {
+    opacity: 0; /* تبدأ بالشفافية */
+    transform: translateY(-20px); /* تبدأ من موضع أعلى */
+    animation: slideIn 0.5s forwards; /* تطبيق الأنيميشن */
+    color: red; /* Dark red text */
+    padding: 1rem; /* استخدام وحدات مرنة */
+    margin: 0.5rem 0; /* استخدام وحدات مرنة */
+    border-radius: 5px;
+    text-align: center; 
+    width: 100%; /* عرض 100% ليتناسب مع الحاوية */
+    box-sizing: border-box; /* لحساب الحدود والحشوات ضمن العرض الإجمالي */
+}
+
+.custom_button_success {
+    display: inline-block;
+    margin-top: 2rem; /* استخدام وحدات مرنة */
+    padding: 1rem 2rem; /* استخدام وحدات مرنة */
+    border: none; 
+    border-radius: 5px; 
+    background-color: green; 
+    color: #fff; 
+    font-size: 1rem; /* استخدام وحدات مرنة */
+    font-weight: bold; 
+    text-align: center; 
+    cursor: pointer; 
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    width: 100%; /* عرض 100% ليكون الأزرار واسعة */
+    max-width: 300px; /* الحد الأقصى للعرض */
+}
+
+.custom_button_success:hover {
+    background-color: #2cc98a; /* Darker shade of the primary color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.custom_button_success:active {
+    background-color: #42a985; /* Even darker shade when button is pressed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect when pressed */
+}
+
+.custom_button_fail {
+    display: inline-block;
+    margin-top: 2rem; /* استخدام وحدات مرنة */
+    padding: 1rem 2rem; /* استخدام وحدات مرنة */
+    border: none; 
+    border-radius: 5px; 
+    background-color: #f80000; 
+    color: #fff; 
+    font-size: 1rem; /* استخدام وحدات مرنة */
+    font-weight: bold; 
+    text-align: center; 
+    cursor: pointer; 
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    width: 100%; /* عرض 100% ليكون الأزرار واسعة */
+    max-width: 300px; /* الحد الأقصى للعرض */
+}
+
+.custom_button_fail:hover {
+    background-color: #ba0000; /* Darker shade of the primary color on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.custom_button_fail:active {
+    background-color: #7c0000; /* Even darker shade when button is pressed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect when pressed */
+}
+
+/* Styles for responsiveness */
+@media (max-width: 768px) {
+    .custom_message_success, 
+    .custom_message_fail {
+        font-size: 0.9rem; /* تقليل حجم الخط في الشاشات الصغيرة */
+        padding: 0.75rem; /* تقليل الحشوة */
+    }
+
+    .custom_button_success,
+    .custom_button_fail {
+        font-size: 0.9rem; /* تقليل حجم الخط في الشاشات الصغيرة */
+        padding: 0.75rem 1.5rem; /* تقليل الحشوة */
+    }
+}

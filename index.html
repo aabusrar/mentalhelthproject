@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Website - MindfulSpace</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: cursive;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            background-image: url("images/b.PNG");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+        .herosecound{
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            background-image: url("images/f.PNG");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+        }
+        .herosecound::before{
+          
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+        
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            margin-top: 30px;
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #D5837E;
+            padding: 15px 30px;
+            margin: 10px;
+            border-radius: 5px;
+            font-size:17px;
+            font-weight: 900;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-buttons a:hover {
+            background-color: #823f3c;
+            transform: translateY(-3px);
+        }
+
+        /* Main Content Section */
+        .main-content {
+            background-color: #f8f9fa;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .main-content h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .main-content p {
+            font-size: 25;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        /* How it Works Section */
+        .how-it-works {
+            margin-bottom: 50px;
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .how-it-works h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .how-it-works p {
+            font-size: 20px;
+            max-width: 900px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .feature {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .feature h3 {
+            font-size: 25px;
+            margin-bottom: 15px;
+            color: #D5837E;
+        }
+
+        .feature p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .main-content h2, .how-it-works h2 {
+                font-size: 2.2em;
+            }
+
+            .features-grid {
+                flex-direction: column;
+            }
+
+            .feature {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1em;
+            }
+
+            .cta-buttons a {
+                font-size: 16px;
+                padding: 8px 15px;
+            }
+
+            .main-content h2, .how-it-works h2 {
+                font-size: 1.8em;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="cta-buttons" style="position: absolute; right: 20px; top: 25px; z-index: 1;">
+            <a href="login.php">Login</a>
+            </div>
+        <div class="hero-content container">
+            <h1>Welcome to MindfulSpace</h1>
+            <p>Your Safe Space for Mental Health Support</p>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="main-content">
+        <div class="container">
+            <h2>Take Control of Your Mental Well-being</h2>
+            <p style="font-size: 20px;">
+                At MindfulSpace, we believe that mental health is just as important as physical health. Whether you're looking for support or guidance, we're here to help you on your journey. Join our community today and explore our resources on mindfulness, relaxation, and more.
+            </p>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How MindfulSpace Works</h2>
+            <p>
+                Our platform provides you with an easy and engaging way to track your daily mental health journey. Here’s how it works:
+            </p>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>Track Your Mood</h3>
+                    <p>Log your mood daily to better understand your emotional well-being. Keep track of how you feel over time and gain insights into your mental health patterns.</p>
+                </div>
+                <div class="feature">
+                    <h3>Exercise & Play</h3>
+                    <p>Engage in guided mindfulness exercises and relaxation activities. Play through our carefully curated exercises to relieve stress and enhance mental clarity.</p>
+                </div>
+                <div class="feature">
+                    <h3>View Your Progress</h3>
+                    <p>Access your personalized report to see all the moods you've logged and exercises you've completed. Track your growth and celebrate your milestones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="herosecound">
+        <div class="hero-content container">
+            <h1>What are you waiting for ? Join now</h1>
+            <div class="cta-buttons">
+                <a href="singup.php">Start my journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 MindfulSpace. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

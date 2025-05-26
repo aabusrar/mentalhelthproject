@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm</title>
+    <style>
+        #custom_confirm {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000; /* Ensure it's on top */
+        }
+        
+        .confirm_box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Maximum width for the box */
+            width: 90%; /* Make it responsive */
+        }
+        
+        .confirm_box button {
+            width: 100px;
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .confirm_box button:hover {
+            background-color: #4Ca039;
+        }
+        
+        .confirm_box button:last-child {
+            background-color: #FAA336;
+        }
+        
+        .confirm_box button:last-child:hover {
+            background-color: #D32F2F;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .confirm_box {
+                padding: 15px; /* Reduce padding on smaller screens */
+            }
+        
+            .confirm_box button {
+                width: 80px; /* Smaller button width for mobile */
+                font-size: 14px; /* Adjust font size */
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="custom_confirm">
+        <div class="confirm_box">
+            <p>Are you sure you want to logout</p>
+            <button onclick="logout()">Ok</button>
+            <button onclick="closeConfirm()">Close</button>
+        </div>
+    </div>
+    <script>
+        function confirmlogout(){
+            document.getElementById('custom_confirm').style.display='flex';
+        }
+        function closeConfirm(){
+            window.location.href ="dashboard.php";
+        }
+        function logout(){
+            window.location.href ="php/logout.php";
+        }
+    </script>
+    
+</body>
+</html>
